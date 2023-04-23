@@ -11,4 +11,9 @@ const create = async (req: Request, res: Response) => {
   return res.status(201).json(response);
 };
 
-export default { create };
+const getAll = async (req: Request, res: Response) => {
+  const response = await Car.find();
+  return res.status(200).json(response);
+};
+
+export default { create, getAll };
