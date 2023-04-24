@@ -3,7 +3,7 @@ version: "3"
 services:
   node:
     image: node:16.14
-    container_name: car_shop
+    container_name: node
     build: ./ 
     tty: true
     stdin_open: true
@@ -21,7 +21,7 @@ services:
 
   mongodb:
     image: mongo:5.0.7
-    container_name: car_shop_db
+    container_name: db
     volumes:
       - ./:/app
     restart: always
