@@ -50,7 +50,7 @@ describe("GET request to all cars", () => {
         expect(body.message).toEqual('Invalid mongo id');
       });
 
-      it('Será validado que é possível listar um carro específico com sucesso', async () => {
+      it('Renders a car with a valid id', async () => {
         const { body, statusCode } = await request(app).get(`/cars/${VALID_ID}`);
         const keys = ["id", "model", "year", "color", "buyValue", "doorsQty", "seatsQty"]
         
