@@ -1,6 +1,6 @@
 import { ICar, IMotorcycle } from '../Interfaces';
 import { Car, Motorcycle } from '../Models';
-import checkId from '../Middlewares';
+import { checkId } from '../Middlewares';
 
 const car = (object: ICar | any) => {
   const { _id: id, model, year, color, status, buyValue, doorsQty, seatsQty } = object;
@@ -48,4 +48,5 @@ const get = async (vehicle:string, id: string, method: string, model: any, body?
   return convertMotorcycle(id, method, body, found);
 };
 
-export { get, convert, convertCar, convertMotorcycle };
+export { convert, convertCar, convertMotorcycle };
+export default { get };

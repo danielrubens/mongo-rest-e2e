@@ -1,5 +1,5 @@
 import express from 'express';
-import controller from './Controllers/Car';
+import controller from './Controllers/vehicles';
 
 const app = express();
 app.use(express.Router());
