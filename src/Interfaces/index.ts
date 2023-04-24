@@ -1,4 +1,5 @@
 import ICar from './ICar';
+import IVehicle from './IVehicle';
 import IMotorcycle from './IMotorcycle';
 
-export { ICar, IMotorcycle };
+export { ICar, IMotorcycle, IVehicle };
