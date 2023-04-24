@@ -7,18 +7,14 @@ class Car {
   public color: string;
   public buyValue: number;
   public status: boolean | undefined;
-  public doorsQty: number;
-  public seatsQty: number;
 
-  constructor({ id, model, year, color, status, buyValue, doorsQty, seatsQty }: ICar) {
+  constructor({ id, model, year, color, status, buyValue }: ICar) {
     this.id = id;
     this.buyValue = buyValue;
     this.color = color;
     this.model = model;
     this.year = year;
     this.status = status;
-    this.doorsQty = doorsQty;
-    this.seatsQty = seatsQty;
   }
   
   public getId() {
