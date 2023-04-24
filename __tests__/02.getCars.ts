@@ -1,26 +1,13 @@
 import app from '../src/app'
 import request from 'supertest'
 import { ICar } from '../src/Interfaces'
-import { model, Schema } from 'mongoose'
-import { carsArray } from './utils/CarsMock'
-import Connection from '../src/Models/Connection'
-import { clearDatabase, closeDatabase } from './utils/db'
+import { closeDatabase, setUpTest } from './utils/db'
 
 describe("GET request to all cars", () => {
 
     let VALID_ID: string;
 
-    beforeAll(async () => {
-        await Connection();
-        await clearDatabase();
-        const schema = new Schema({}, { strict: false, collection: 'cars'})
-        const Car = model('CarTest', schema)
-        let car = new Car(carsArray[0])
-        await car.save()
-        car = new Car(carsArray[1])
-        const { _id } = await car.save()
-        VALID_ID = _id
-    })
+    beforeAll(async () => { VALID_ID = await setUpTest() })
 
     afterAll(async () => { await closeDatabase()})
 
