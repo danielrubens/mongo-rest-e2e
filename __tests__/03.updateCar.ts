@@ -1,7 +1,7 @@
 import request from 'supertest'
 import app from '../src/app'
 import { closeDatabase, setUpTest } from './utils/db'
-import { updatedCar, validCar } from './utils/CarsMock'
+import { updatedCar } from './utils/CarsMock'
 
 describe("PUT request on route /cars/:id", () => {
 
