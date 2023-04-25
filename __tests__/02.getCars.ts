@@ -3,7 +3,7 @@ import request from 'supertest'
 import { ICar } from '../src/Interfaces'
 import { closeDatabase, setUpTest } from './utils/db'
 
-describe("GET request to all cars", () => {
+describe("GET request on route /cars", () => {
 
     let VALID_ID: string;
 
