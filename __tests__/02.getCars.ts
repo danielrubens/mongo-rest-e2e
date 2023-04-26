@@ -7,7 +7,7 @@ describe("GET request on route /cars", () => {
 
     let VALID_ID: string;
 
-    beforeAll(async () => { VALID_ID = await setUpTest() })
+    beforeAll(async () => { VALID_ID = await setUpTest('cars') })
 
     afterAll(async () => { await closeDatabase()})
 
