@@ -1,8 +1,7 @@
 import request from 'supertest'
 import app from '../src/app'
 import { closeDatabase, setUpTest } from './utils/db'
-import { updatedMotorcycle } from './utils/MotorcyclesMock'
-import { updatedCar } from './utils/CarsMock'
+import { updatedCar, updatedMotorcycle } from './utils/'
 
 const putDynamically = (vehicle: any) => {
 
