@@ -16,6 +16,7 @@ const motorcycleInterfaceTestCategory1: IMotorcycle = {
     color: 'Green',
     buyValue: 15.000,
     category: 'Dual-Sport',
+    engineCapacity: 1750,
   };
   
   const motorcycleInterfaceTestCategory3: IMotorcycle = {
